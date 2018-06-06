@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './Track.css';
 
 
@@ -13,6 +12,7 @@ class Track extends Component {
         else {
             //Display a + tag       
         }
+        this.className='Track-action';
     }
     render() {
         return (

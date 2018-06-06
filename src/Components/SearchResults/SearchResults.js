@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './SearchResults.css';
 import TrackList from '../TrackList';
 
