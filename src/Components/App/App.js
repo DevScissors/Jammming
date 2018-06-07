@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import SearchResults from '../SearchResults/SearchResults.js';
+import SearchBar from '../SearchBar/SearchBar.js';
+import Playlist from '../Playlist/Playlist.js';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +14,7 @@ class App extends Component {
             album: 'Greatest Hits',
             id: 1
         }],
-        playlistName: '',
+        playlistName: 'New Playlist',
         playlistTracks: [{
           name: 'Real song',
           artist: 'Fake artist',
@@ -26,10 +28,10 @@ class App extends Component {
       <div>
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
         <div className="App">
-          //Add a SearchBar component 
+          <SearchBar />
           <div className="App-playlist">
           <SearchResults searchResults={this.state.searchResults} />
-          //Add a Playlist component 
+          <Playlist />
         </div>
       </div>
     </div>
