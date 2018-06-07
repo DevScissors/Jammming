@@ -6,9 +6,9 @@ import TrackList from '../TrackList';
 class SearchResults extends Component {
   render() {
     return (
-        <div className="SearchBar">
-            <input placeholder="Enter A Song, Album, or Artist" />
-            <a>SEARCH</a>
+        <div className="SearchResults">
+            <h2>Results</h2>
+            <TrackList tracks={this.props.SearchResults} />
         </div>
     );
   }
