@@ -6,11 +6,18 @@ class App extends Component {
     super(props);
     this.state = {
         searchResults: [{
-            name,
-            artist,
-            album,
-            id
-        }]
+            name: 'Fake song',
+            artist: 'Test artist',
+            album: 'Greatest Hits',
+            id: 1
+        }],
+        playlistName = '',
+        playlistTracks = [{
+          name: 'Real song',
+          artist: 'Fake artist',
+          album: 'Special Edition',
+          id: 1
+      }],
     }
 }
   render() {
