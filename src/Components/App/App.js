@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import SearchResults from '../SearchResults/SearchResults.js';
 
 class App extends Component {
   constructor(props) {
@@ -11,8 +12,8 @@ class App extends Component {
             album: 'Greatest Hits',
             id: 1
         }],
-        playlistName = '',
-        playlistTracks = [{
+        playlistName: '',
+        playlistTracks: [{
           name: 'Real song',
           artist: 'Fake artist',
           album: 'Special Edition',
