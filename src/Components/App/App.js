@@ -20,9 +20,9 @@ class App extends Component {
           artist: 'Fake artist',
           album: 'Special Edition',
           id: 1
-      }],
+        }],
     }
-}
+  }
   render() {
     return (
       <div>
@@ -31,7 +31,7 @@ class App extends Component {
           <SearchBar />
           <div className="App-playlist">
           <SearchResults searchResults={this.state.searchResults} />
-          <Playlist playlistTracks={this.state.playlistTracks} />
+          <Playlist tracks={this.state.playlistTracks} playlistName={this.state.playlistName}/>
         </div>
       </div>
     </div>
