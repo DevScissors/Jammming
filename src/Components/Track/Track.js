@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import './Track.css';
 
@@ -8,11 +7,12 @@ class Track extends Component {
     renderAction (isRemoval) {
         if(isRemoval) {
             //Display a - tag
+            return <a className='Track-action'>-</a>
         }
         else {
-            //Display a + tag       
+            //Display a + tag
+            return <a className='Track-action'>+</a>       
         }
-        this.className='Track-action';
     }
     render() {
         return (
