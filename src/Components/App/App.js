@@ -31,7 +31,7 @@ class App extends Component {
           <SearchBar />
           <div className="App-playlist">
           <SearchResults searchResults={this.state.searchResults} />
-          <Playlist />
+          <Playlist playlistTracks={this.state.playlistTracks} />
         </div>
       </div>
     </div>
