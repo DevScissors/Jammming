@@ -23,6 +23,7 @@ class App extends Component {
         }],
     }
     this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
   }
 
   addTrack(track) {
@@ -33,6 +34,13 @@ class App extends Component {
       alert('Song already added to playlist.');
     }
   }
+
+  removeTrack(track) {
+    if(this.playlistTracks.filter(track.id)) {
+      return this.state.playlistTracks;
+    }
+  }
+
   render() {
     return (
       <div>
@@ -40,8 +48,8 @@ class App extends Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-          <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack()} />
-          <Playlist playlistTracks={this.state.playlistTracks} playlistName={this.state.playlistName}/>
+          <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack} />
+          <Playlist playlistTracks={this.state.playlistTracks} playlistName={this.state.playlistName} onRemove={this.removeTrack}/>
         </div>
       </div>
     </div>

@@ -3,15 +3,24 @@ import './Track.css';
 
 
 class Track extends Component {
-    renderAction (isRemoval) {
-        if(isRemoval) {
+    constructor(props) {
+        super(props);
+        this.addTrack = this.addTrack.bind(this);
+        this.removeTrack = this.removeTrack.bind(this);
+    }
+    renderAction () {
+        if(this.props.isRemoval) {
             //Display a - tag
-            return <a className='Track-action'>-</a>
+            return <a onClick={this.removeTrack} className='Track-action'>-</a>
         }
-        else {
             //Display a + tag
-            return <a className='Track-action'>+</a>       
-        }
+            return <a onClick={this.addTrack} className='Track-action'>+</a>       
+    }
+    addTrack () {
+        return this.props.onAdd(this.props.track);
+    }
+    removeTrack() {
+        return this.props.onRemove(this.props.track);
     }
     render() {
         return (
