@@ -19,8 +19,18 @@ class App extends Component {
           name: 'Real song',
           artist: 'Fake artist',
           album: 'Special Edition',
-          id: 1
+          id: 2
         }],
+    }
+    this.addTrack = this.addTrack.bind(this);
+  }
+
+  addTrack(track) {
+    if(this.state.playlistTracks.find(savedTrack => savedTrack.id === this.state.playlistTracks.id)) {
+      return;
+    }
+    else {
+      alert('Song already added to playlist.');
     }
   }
   render() {
@@ -30,7 +40,7 @@ class App extends Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-          <SearchResults searchResults={this.state.searchResults} />
+          <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack()} />
           <Playlist playlistTracks={this.state.playlistTracks} playlistName={this.state.playlistName}/>
         </div>
       </div>
