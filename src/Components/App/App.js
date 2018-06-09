@@ -33,12 +33,12 @@ class App extends Component {
     let tracks = this.state.playlistTracks;
     let resultList = this.state.searchResults;
     if (tracks.find(savedTrack => savedTrack.id === track.id)) {
-      resultList.pop(track);
       this.setState({searchResults: resultList})
       return;
     }
 
     tracks.push(track);
+    resultList.pop(track);
     this.setState({playlistTracks: tracks});
   }
 
