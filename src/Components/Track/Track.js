@@ -17,10 +17,10 @@ class Track extends Component {
             return <a onClick={this.addTrack} className='Track-action'>+</a>       
     }
     addTrack () {
-        return this.props.onAdd(this.props.track);
+        /*return*/ this.props.onAdd(this.props.track);
     }
     removeTrack() {
-        return this.props.onRemove(this.props.track);
+        /*return*/ this.props.onRemove(this.props.track);
     }
     render() {
         return (
