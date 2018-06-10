@@ -31,35 +31,37 @@ class App extends Component {
 
   addTrack(track) {
     let tracks = this.state.playlistTracks;
-    let resultList = this.state.searchResults;
+    //let resultList = this.state.searchResults;
     if (tracks.find(savedTrack => savedTrack.id === track.id)) {
-      this.setState({searchResults: resultList})
       return;
     }
 
     tracks.push(track);
-    resultList.pop(track);
+    //resultList.pop(track);
     this.setState({playlistTracks: tracks});
+    //this.setState({searchResults: resultList});
   }
 
   removeTrack(track) {
     let tracks = this.state.playlistTracks;
-    let resultList = this.state.searchResults;
+    //let resultList = this.state.searchResults;
     tracks = tracks.filter(currentTrack => currentTrack.id !== track.id);
 
-    resultList.push(track);
+    //resultList.push(track);
 
     this.setState({playlistTracks: tracks});
-    this.setState({searchResults: resultList})
+    //this.setState({searchResults: resultList});
   }
 
   updatePlaylistName(name) {      
     this.setState({playlistName: name});    
   }
   
-  savePlaylist (uri) {
-    let trackURIs = [];
-    this.props.playlistTracks = trackURIs[uri];
+  savePlaylist () {
+    let customPlaylist = this.state.playlistTracks.map(trackURIs => {
+      let uri
+      return trackURIs[uri];
+    })
   }
 
   search (searchTerm) {
