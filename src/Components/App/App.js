@@ -58,10 +58,7 @@ class App extends Component {
   }
   
   savePlaylist () {
-    let customPlaylist = this.state.playlistTracks.map(trackURIs => {
-      let uri
-      return trackURIs[uri];
-    })
+      let customPlaylist = this.state.playlistTracks.map(trackURIs => trackURIs.uri); 
   }
 
   search (searchTerm) {
