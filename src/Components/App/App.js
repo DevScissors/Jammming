@@ -9,20 +9,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        searchResults: [{
-            name: 'Fake song',
-            artist: 'Test artist',
-            album: 'Greatest Hits',
-            id: 1
-        }],
+        searchResults: [],
         playlistName: 'New Playlist',
-        playlistTracks: [{
-          name: 'Real song',
-          artist: 'Fake artist',
-          album: 'Special Edition',
-          id: 2
-        }],
-    }
+        playlistTracks: []
+    };
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);

@@ -1,5 +1,5 @@
 const clientID = '3e5d473c1c524feab8353cdd596c0ba9';
-const uri = 'http://localhost:3000/';
+const uri = 'http://localhost:3000';
 
 let accessToken;
 
@@ -51,7 +51,7 @@ const Spotify = {
         else {
             return;
         }
-        let accessToken = accessToken;
+        let accessToken;
         let headers = {
             Authorization: `Bearer ${accessToken}`
         }
