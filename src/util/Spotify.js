@@ -1,5 +1,5 @@
 const clientID = '3e5d473c1c524feab8353cdd596c0ba9';
-const uri = 'http://scizjammming.surge.sh';
+const uri = 'https://scizjammming.surge.sh';
 
 let accessToken;
 
